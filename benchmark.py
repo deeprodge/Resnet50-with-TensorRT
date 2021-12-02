@@ -116,3 +116,25 @@ if __name__ == "__main__":
     tr = benchmark( engine, context = context,typee='trt', nwarmup=50, nruns=nruns)
     print('\n\n# Pytorch took around '+"%.2f"%py+"ms whereas TensorRT took "+'%.2f'%tr+"ms for a batch")
     print('# Therefore TensorRT is about %.2f times faster.'%(py/tr))
+
+
+    fig = plt.figure(figsize = (10, 10))
+    y = [round(py,2),round(tr,2)]
+    plt.rcParams.update({'font.size': 15})
+    # creating the bar plot
+    barr = plt.bar(['PyTorch','TensorRT'], y)
+    barr[0].set_color('orange')
+    barr[1].set_color('green')
+    plt.ylabel("Time taken for inference (in ms)",fontdict=dict(fontsize=15))
+    plt.title("Comparision of Inference Time (Lower is better)",fontdict=dict(fontsize=15))
+    for index,data in enumerate(y):
+        plt.text(x=index , y =data +0.03, s=f"{data} ms" ,ha='center', fontdict=dict(fontsize=18))
+    i = 0
+    while True:
+        if not os.path.isfile('Result{}.png'.format(i)):
+            plt.savefig('Result{}.png'.format(i))
+            break
+        else:
+            i+=1
+
+    print('# A graph comparing Inference Time of both have been saved as Result{}.png'.format(i))
