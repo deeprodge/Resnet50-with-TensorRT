@@ -1,35 +1,18 @@
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+<!-- [![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url] -->
 
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/deeprodge/Resnet50-with-TensorRT">
     <img src="https://developer.nvidia.com/blog/wp-content/uploads/2018/11/NV_TensorRT_Visual_2C_RGB-625x625-1.png" alt="Logo" height="80">
   </a>
 
@@ -38,10 +21,10 @@
   <p align="center">
     A ResNet50 Brain MRI Classifier that is optimized using TensorRT
     <br/>
-    <!-- <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <!-- <a href="https://github.com/deeprodge/Resnet50-with-TensorRT"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/deeprodge/Resnet50-with-TensorRT">View Demo</a>
     · -->
     <a href="https://github.com/deeprodge/Resnet50-with-TensorRT/issues">Report Bug</a>
     ·
@@ -84,16 +67,18 @@
 ## About The Project
 <br>
 <div align="center">
-<img src="https://storage.googleapis.com/kaggle-datasets-images/1608934/2645886/44583c7826d1bdea68598f0eef8e6cfc/dataset-cover.jpg?t=2021-09-25-22-03-08" alt="Logo" height="200">
+<img src="https://i.imgur.com/JD4lELi.jpg" alt="Logo" height="200">
 </div>
 
 <p>
-It is a Brain-MRI scan classifer that classifies the scans into 4 categories: Glioma, Meningioma, Pituitary, No Tumor.
+
+It is a Brain-MRI scan classifer that classifies the scans into 4 categories: Glioma, Meningioma, Pituitary, No Tumor. It is also Implemented with TensorRT to optimizes the Inference.
+<img src="Result1.png" alt="Logo" height="400">
+
 </p>
 
 ### More Info
 - Used ResNet50 for Transfer Learning
-- Implemented TensorRT to change the precision of model to FP16(if available) to optimize Inference.
 - Used LR scheduler while training
 - Used Data Augmention to synthesise new data
 
@@ -208,7 +193,7 @@ Run any script with --help to see all the arguments available.
     - [ ] Chinese
     - [ ] Spanish
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/deeprodge/Resnet50-with-TensorRT/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p> -->
 
@@ -265,15 +250,15 @@ Project Link: [https://github.com/deeprodge/Resnet50-with-TensorRT](https://gith
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/deeprodge/Resnet50-with-TensorRT.svg?style=for-the-badge
 [contributors-url]: https://github.com/deeprodge/Resnet50-with-TensorRT/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/deeprodge/Resnet50-with-TensorRT.svg?style=for-the-badge
 [forks-url]: https://github.com/deeprodge/Resnet50-with-TensorRT/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/deeprodge/Resnet50-with-TensorRT.svg?style=for-the-badge
 [stars-url]: https://github.com/deeprodge/Resnet50-with-TensorRT/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/deeprodge/Resnet50-with-TensorRT.svg?style=for-the-badge
 [issues-url]: https://github.com/deeprodge/Resnet50-with-TensorRT/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/deeprodge/Resnet50-with-TensorRT.svg?style=for-the-badge
 [license-url]: https://github.com/deeprodge/Resnet50-with-TensorRT/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/deeprodge
