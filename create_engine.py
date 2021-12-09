@@ -66,22 +66,18 @@ def create_engine(onnx_dir='model.onnx'):
         print("# Not Success")
 
     config = builder.create_builder_config()
-    #config.max_workspace_size = 1<<20
-    #builder.max_batch_size = 1
-
+    config.max_workspace_size = 80000000
     if builder.platform_has_fast_fp16:
-        builder.fp16_mode = True
+        config.set_flag(trt.BuilderFlag.FP16)
         print("# Building in FP16 Mode")
         
     print('# Building an engine...')
-    engine = builder.build_cuda_engine(network)
-    context = engine.create_execution_context()
+    serialized_engine = builder.build_serialized_network(network, config)
     print("# Saving Engine")
 
     with open("model.engine", "wb") as f:
-        f.write(engine.serialize())
+        f.write(serialized_engine)
     print('# Engine created and saved!')
-
 
 
 if __name__ == "__main__":

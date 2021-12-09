@@ -16,9 +16,9 @@ import torch.nn.functional as F
 
 def load_engine(engine_dir='model.engine'):
     logger = trt.Logger(trt.Logger.WARNING)
+    runtime = trt.Runtime(logger)
     with open(engine_dir, "rb") as f:
         serialized_engine = f.read()
-    runtime = trt.Runtime(logger)
     engine = runtime.deserialize_cuda_engine(serialized_engine)
     context = engine.create_execution_context()
     return engine, context
